@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,11 +16,28 @@ public class WinnerScreen : MonoBehaviour
         //Starts panels depending on winner 1 is for O 2 is for X
         if (WinnerChecker.gameOver == true && WinnerChecker.winner == 1)
         {
-            OWinsPanel.SetActive(true);
+            try
+            {
+                OWinsPanel.SetActive(true);
+            }
+            catch(Exception e)
+            {
+                Debug.Log(e);
+                Debug.Log("Check if OWinsPanel Exists");
+            }
+            
         }
         else if (WinnerChecker.gameOver == true && WinnerChecker.winner == 2)
         {
-            XWinsPanel.SetActive(true);
+            try
+            {
+                XWinsPanel.SetActive(true);
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+                Debug.Log("Check if XWinsPanel Exists");
+            }
         }
     }
 }

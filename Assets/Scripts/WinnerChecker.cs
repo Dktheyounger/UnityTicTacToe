@@ -17,11 +17,11 @@ public class WinnerChecker : MonoBehaviour
     //2 and 1 are switch because this happens after they switch in square script
     public void SquareOneOne()
     {
-        if (TurnSelctor.First == true)
+        if (TurnSelctor.First == true && letterTracker[0, 0] == 0)
         {
             letterTracker[0, 0] = 2;
         }
-        else
+        else if (TurnSelctor.First == false && letterTracker[0, 0] == 0)
         {
             letterTracker[0, 0] = 1;
         }
@@ -29,88 +29,88 @@ public class WinnerChecker : MonoBehaviour
     }
     public void SquareTwoOne()
     {
-        if (TurnSelctor.First == true)
+        if (TurnSelctor.First == true && letterTracker[1, 0] == 0)
         {
             letterTracker[1, 0] = 2;
         }
-        else
+        else if (TurnSelctor.First == false && letterTracker[1, 0] == 0)
         {
             letterTracker[1, 0] = 1;
         }
     }
     public void SquareThreeOne()
     {
-        if (TurnSelctor.First == true)
+        if (TurnSelctor.First == true && letterTracker[2, 0] == 0)
         {
             letterTracker[2, 0] = 2;
         }
-        else
+        else if (TurnSelctor.First == false && letterTracker[2, 0] == 0)
         {
             letterTracker[2, 0] = 1;
         }
     }
     public void SquareOneTwo()
     {
-        if (TurnSelctor.First == true)
+        if (TurnSelctor.First == true && letterTracker[0, 1] == 0)
         {
             letterTracker[0, 1] = 2;
         }
-        else
+        else if (TurnSelctor.First == false && letterTracker[0, 1] == 0)
         {
             letterTracker[0, 1] = 1;
         }
     }
     public void SquareTwoTwo()
     {
-        if (TurnSelctor.First == true)
+        if (TurnSelctor.First == true && letterTracker[1,1] == 0)
         {
             letterTracker[1, 1] = 2;
         }
-        else
+        else if(TurnSelctor.First == false && letterTracker[1, 1] == 0)
         {
             letterTracker[1, 1] = 1;
         }
     }
     public void SquareThreeTwo()
     {
-        if (TurnSelctor.First == true)
+        if (TurnSelctor.First == true && letterTracker[1, 2] == 0)
         {
             letterTracker[1, 2] = 2;
         }
-        else
+        else if (TurnSelctor.First == false && letterTracker[1, 2] == 0)
         {
             letterTracker[1, 2] = 1;
         }
     }
     public void SquareOneThree()
     {
-        if (TurnSelctor.First == true)
-        {
+        if (TurnSelctor.First == true && letterTracker[0, 2] == 0)
+            {
             letterTracker[0, 2] = 2;
         }
-        else
+        else if (TurnSelctor.First == false && letterTracker[0, 2] == 0)
         {
             letterTracker[0, 2] = 1;
         }
     }
     public void SquareTwoThree()
     {
-        if (TurnSelctor.First == true)
+        if (TurnSelctor.First == true && letterTracker[2, 1] == 0)
         {
             letterTracker[2, 1] = 2;
         }
-        else
+        else if (TurnSelctor.First == false && letterTracker[2, 1] == 0)
         {
             letterTracker[2, 1] = 1;
         }
     }
     public void SquareThreeThree()
     {
-        if (TurnSelctor.First == true)
+        if (TurnSelctor.First == true && letterTracker[2, 2] == 0)
         {
             letterTracker[2, 2] = 2;
         }
-        else
+        else if (TurnSelctor.First == false && letterTracker[2, 2] == 0)
         {
             letterTracker[2, 2] = 1;
         }

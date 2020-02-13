@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,20 +32,68 @@ public class Square : MonoBehaviour
     {
         if (TurnSelctor.First == true && NoneorOorX == 0)
         {
-            image = GetComponent<Image>();
-            image.color = new Color(image.color.r, image.color.g, image.color.b, 255f);
+            try
+            {
+                image = GetComponent<Image>();
+                image.color = new Color(image.color.r, image.color.g, image.color.b, 255f);
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+                Debug.Log("Check if Image exists");
+            }
+
+
+            try
+            {
+                button.image.sprite = OSprite;
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+                Debug.Log("button exists");
+            }
             
-            button.image.sprite = OSprite;
             TurnSelctor.First = false;
             NoneorOorX = 1;
+            
+            
+           
+           
+            
         }
         else if (TurnSelctor.First == false && NoneorOorX == 0)
         {
-            image = GetComponent<Image>();
-            image.color = new Color(image.color.r, image.color.g, image.color.b, 255f);
-            button.image.sprite = XSprite;
+            try
+            {
+                image = GetComponent<Image>();
+                image.color = new Color(image.color.r, image.color.g, image.color.b, 255f);
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+                Debug.Log("Check if Image exists");
+            }
+
+            try
+            {
+                button.image.sprite = XSprite;
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+                Debug.Log("button exists");
+            }
+            
+
             TurnSelctor.First = true;
             NoneorOorX = 2;
+            
+
+           
+
+
+
         }
     }
 }

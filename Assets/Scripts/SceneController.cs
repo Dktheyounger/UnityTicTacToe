@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +13,16 @@ public class SceneController : MonoBehaviour
     {
         //reset all variables and change scene to the start scene
 
-        SceneManager.LoadScene("Start");
+        try
+        {
+            SceneManager.LoadScene("Start");
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Check if scene exists");
+            Debug.Log(e);
+        }
+
         WinnerChecker.winner = 0;
         WinnerChecker.gameOver = false;
         WinnerChecker.letterTracker[0, 0] = 0;
@@ -32,7 +42,15 @@ public class SceneController : MonoBehaviour
     public void GameScene()
     {
         //Change scene to game scene
-        SceneManager.LoadScene("Game");
+        try 
+        {
+            SceneManager.LoadScene("Game");
+        }
+        catch(Exception e)
+        {
+            Debug.Log("Check if scene exists");
+            Debug.Log(e);
+        }
     }
 
 }
